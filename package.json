@@ -1,0 +1,23 @@
+{
+   "name": "@leptonite/parse-int-strict",
+   "version": "0.1.0",
+   "author": "Daniel Faber <mail@daniel-faber.de>",
+   "license": "WTFPL",
+   "description": "strict replacement for parseInt",
+   "main": "build/parseIntStrict.js",
+   "types": "build/parseIntStrict.d.ts",
+   "repository": {
+      "type": "git",
+      "url": "https://github.com/leptonite/parse-int-strict.git"
+   },
+   "scripts": {
+      "build": "tsc -p .",
+      "test": "jest --no-cache --coverage"
+   },
+   "devDependencies": {
+      "@types/jest": "27.0.1",
+      "jest": "27.1.1",
+      "ts-jest": "27.0.5",
+      "typescript": "4.4.3"
+   }
+}
