@@ -2,7 +2,7 @@
    "name": "@leptonite/parse-int-strict",
    "version": "0.1.0",
    "author": "Daniel Faber <mail@daniel-faber.de>",
-   "license": "WTFPL",
+   "license": "MIT",
    "description": "strict replacement for parseInt",
    "main": "build/parseIntStrict.js",
    "types": "build/parseIntStrict.d.ts",
