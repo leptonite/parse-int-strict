@@ -75,7 +75,7 @@ test('rejects numbers > Number.MAX_SAFE_INTEGER', () => {
 
 // This is not a real test case. It just helps me to create the examples table in README.md.
 test('compare parseInt(s), parseInt(s, 10), Number(s) and parseIntStrict(s)', () => {
-   const pad = (s: string, w: number) => s + ' '.repeat(Math.max(0, w - s.length));
+   const pad = (s: string, w: number): string => s + ' '.repeat(Math.max(0, w - s.length));
    const strings = {
       '0.5': 'fractional numbers',
       '1a': 'trailing non-digits',
@@ -87,7 +87,8 @@ test('compare parseInt(s), parseInt(s, 10), Number(s) and parseIntStrict(s)', ()
    };
    let report = `${pad('', 25)}   ${pad('s', 19)}   ${pad('parseInt(s)', 17)}   ${pad('parseInt(s, 10)', 17)}   ${pad('Number(s)', 17)}   ${pad('parseIntStrict(s)', 17)}\n`;
    for (const [s, description] of Object.entries(strings)) {
+      // eslint-disable-next-line radix
       report += `${pad(description, 25)}   ${pad(`${JSON.stringify(s)}`, 19)}   ${pad(`${parseInt(s)}`, 17)}   ${pad(`${parseInt(s, 10)}`, 17)}   ${pad(`${Number(s)}`, 17)}   ${pad(`${parseIntStrict(s)}`, 17)}\n`;
    }
-   console.log(report);
+   process.stdout.write('\n' + report + '\n');
 });
